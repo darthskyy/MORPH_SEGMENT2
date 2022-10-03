@@ -1,5 +1,7 @@
 #!/bin/bash
+dataset=$1
 arch=transformer
+
 lr=0.001
 scheduler=warmupinvsqr
 max_steps=20000
@@ -8,15 +10,18 @@ beta2=0.98       # 0.999
 label_smooth=0.1 # 0.0
 total_eval=50
 bs=400 # 256
+
 # transformer
 layers=4
 hs=1024
 embed_dim=256
 nb_heads=4
 dropout=${2:-0.3}
+
 data_dir=data/ndebele
 data=ndebele
 ckpt_dir=checkpoints/transformer
+
 python3 src/train.py \
     --dataset g2p \
     --train $data_dir/$data.train \
