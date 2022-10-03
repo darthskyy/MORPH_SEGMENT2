@@ -1,12 +1,12 @@
 #!/bin/bash
-arch=$1
+arch=transformer
 seed=${2:-0}
-for data in NETtalk CMUDict; do
+for data in ndebele swati xhosa zulu; do
     python src/train.py \
         --dataset g2p \
-        --train data/seq2seq/$data.train \
-        --dev data/seq2seq/$data.dev \
-        --test data/seq2seq/$data.test \
+        --train data/$data/$data.train \
+        --dev data/$data/$data.dev \
+        --test data/$data/$data.test \
         --model model/g2p/large/$arch/$data \
         --init init/g2p/large/seed-$seed/$data --seed $seed \
         --embed_dim 200 --src_hs 400 --trg_hs 400 --dropout 0.4 \
