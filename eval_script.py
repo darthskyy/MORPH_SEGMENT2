@@ -5,7 +5,7 @@ target = []
 
 # %%
 
-with open("checkpoints\\transformer\\transformer\\g2p-dropout0.3\\ndebele.decode.test.tsv", "r") as resultFile:
+with open("model\\g2p\\large\\transformer\\swati.decode.test.tsv", "r") as resultFile:
     results = resultFile.readlines()
 
 results = results[1:]
