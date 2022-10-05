@@ -1,7 +1,23 @@
 #!/bin/bash
+
+#PBS -N runHardG2Pndebele
+#PBS -l select=1:ncpus=10:ngpus=1
+#PBS -l walltime=2:00:00
+#PBS -P CSCI1335
+#PBS -m abe
+#PBS -M mwrsim003@myuct.ac.za
+#PBS -q gpu_1
+ulimit -s unlimited
+
+module load chpc/python/anaconda/3-2021.05
+source /apps/chpc/bio/anaconda3-2021.05/etc/profile.d/conda.sh
+conda activate /home/smawere/.conda/envs/MORPH_SEGMENT2
+pwd
+cd ${HOME}/lustre/
+
 arch=hard
 seed=${2:-0}
-for data in ndebele swati xhosa zulu; do
+for data in ndebele; do
     python src/train.py \
         --dataset g2p \
         --train data/$data/$data.train \
