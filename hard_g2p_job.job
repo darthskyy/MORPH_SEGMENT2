@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N runHardG2Pndebele
+#PBS -N testHardG2Pndebele
 #PBS -l select=1:ncpus=10:ngpus=1
 #PBS -l walltime=2:00:00
 #PBS -P CSCI1335
@@ -13,18 +13,21 @@ module load chpc/python/anaconda/3-2021.05
 source /apps/chpc/bio/anaconda3-2021.05/etc/profile.d/conda.sh
 conda activate /home/smawere/.conda/envs/MORPH_SEGMENT2
 pwd
-cd ${HOME}/lustre/
+cd ${HOME}/lustre/MORPH_SEGMENT2
 
 arch=hard
 seed=${2:-0}
+modelpath=model/test/hardattention/large
+initpath=init/test/large/seed-$seed
+
 for data in ndebele; do
     python src/train.py \
         --dataset g2p \
         --train data/$data/$data.train \
         --dev data/$data/$data.dev \
         --test data/$data/$data.test \
-        --model model/g2p/large/$arch/$data \
-        --init init/g2p/large/seed-$seed/$data --seed $seed \
+        --model $modelpath/$arch/$data \
+        --init initpath/$data --seed $seed \
         --embed_dim 200 --src_hs 400 --trg_hs 400 --dropout 0.4 \
         --src_layer 2 --trg_layer 1 --max_norm 5 --nb_sample 4 \
         --arch $arch --gpuid 0 --estop 1e-8 --epochs 50 --bs 20

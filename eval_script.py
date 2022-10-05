@@ -5,7 +5,7 @@ def process_results(lang: str):
     target = []
 
 
-    with open(f"model/g2p/large/transformer/{lang}.decode.test.tsv", "r") as resultFile:
+    with open(f"checkpoints/transformer/transformer/g2p-dropout0.3/{lang}.decode.test.tsv", "r") as resultFile:
         results = resultFile.readlines()
 
     results = results[1:]
@@ -33,8 +33,8 @@ def eval_morph_segments(predicted, target, lang):
     precision, recall = correct/predicted_length, correct/target_length
     f_score = 2/(1/precision + 1/recall)
 
-    sepr = "\t" if lang!="ndebele" else ""
-    print(f"Language: {lang.title()}{sepr}", f"P: {round(precision*100,3)}", f"R: {round(recall*100,3)}", f"F1: {round(f_score*100,3)}", sep="\t")
+    
+    return f"{lang.title()}\t{round(precision*100,3)}\t{round(recall*100,3)}\t{round(f_score*100,3)}"
 
 
 
@@ -42,10 +42,13 @@ def main():
     n = len(sys.argv)
 
     if n>1:
-        for i in range(1, n):
-            lang = sys.argv[i]
-            pred, trg = process_results(lang)
-            eval_morph_segments(pred, trg, lang)
+        with open("results.tsv", "w") as f: 
+            print("Language","P","R","F1",sep="\t",file=f)
+            for i in range(1, n):
+                lang = sys.argv[i]
+                pred, trg = process_results(lang)
+                results = eval_morph_segments(pred, trg, lang)
+                print(results, file=f)
     else:
         print(f"No files were provided for {sys.argv[0]}")
 
