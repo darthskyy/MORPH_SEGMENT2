@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #PBS -N runG2P
-#PBS -l select=1:ncpus=15:ngpus=1
+#PBS -l select=1:ncpus=10:ngpus=1
 #PBS -l walltime=2:00:00
 #PBS -P CSCI1335
 #PBS -m abe
-#PBS -M 20simbarashem@gmail.com
+#PBS -M mwrsim003@myuct.ac.za
 #PBS -q gpu_1
 ulimit -s unlimited
 
@@ -36,7 +36,7 @@ dropout=${2:-0.3}
 
 ckpt_dir=checkpoints/transformer
 
-for data in ndebele swati xhosa zulu; do
+for data in ndebele; do
     python3 src/train.py \
         --dataset g2p \
         --train data/$data/$data.train \
