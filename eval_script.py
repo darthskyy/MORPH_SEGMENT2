@@ -5,7 +5,7 @@ def process_results(lang: str):
     target = []
 
 
-    with open(f"checkpoints/transformer/transformer/g2p-dropout0.3/{lang}.decode.test.tsv", "r") as resultFile:
+    with open(f"model/test/hardattention/large/hard/{lang}.decode.test.tsv", "r") as resultFile:
         results = resultFile.readlines()
 
     results = results[1:]
