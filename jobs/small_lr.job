@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#PBS -N test_lr_5e-3
+#PBS -l select=1:ncpus=10:ngpus=1
+#PBS -l walltime=8:00:00
+#PBS -P CSCI1335
+#PBS -m abe
+#PBS -M mwrsim003@myuct.ac.za
+#PBS -q gpu_1
+ulimit -s unlimited
+
+module load chpc/python/anaconda/3-2021.05
+source /apps/chpc/bio/anaconda3-2021.05/etc/profile.d/conda.sh
+conda activate /home/smawere/.conda/envs/MORPH_SEGMENT2
+pwd
+cd ${HOME}/lustre/MORPH_SEGMENT2
+
+arch=hard
+seed=${2:-0}
+lr=0.001
+modelpath=model/test/lr/hardattention/small/test
+initpath=init/test/small/seed-$seed
+
+for data in ndebele swati xhosa zulu; do
+    python src/train.py \
+        --dataset g2p \
+        --train data/$data/$data.train \
+        --dev data/$data/$data.dev \
+        --test data/$data/$data.test \
+        --model $modelpath$lr/$data \
+        --init $initpath/$data --seed $seed \
+        --embed_dim 100 --src_hs 200 --trg_hs 200 --dropout 0.2 -lr $lr \
+        --arch $arch --gpuid 0 --estop 1e-8 --epochs 80 --bs 20 --cleanup_anyway
+done

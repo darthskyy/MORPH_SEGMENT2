@@ -1,0 +1,585 @@
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: seed - 0
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: train - ['data/ndebele/ndebele.train']
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: dev - ['data/ndebele/ndebele.dev']
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: test - ['data/ndebele/ndebele.test']
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: model - 'model/test/hardattention/large/hard/ndebele'
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: load - ''
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: bs - 20
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: epochs - 50
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: max_steps - 0
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: warmup_steps - 4000
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: total_eval - -1
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: optimizer - <Optimizer.adam: 'adam'>
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: scheduler - <Scheduler.reducewhenstuck: 'reducewhenstuck'>
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: lr - 0.001
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: min_lr - 1e-05
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: momentum - 0.9
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: beta1 - 0.9
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: beta2 - 0.999
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: estop - 1e-08
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: cooldown - 0
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: patience - 0
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: discount_factor - 0.5
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: max_norm - 5.0
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: gpuid - [0]
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: loglevel - 'info'
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: saveall - False
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: shuffle - False
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: cleanup_anyway - False
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: dataset - <Data.g2p: 'g2p'>
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: max_seq_len - 128
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: max_decode_len - 128
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: decode_beam_size - 5
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: init - 'init/test/large/seed-0/ndebele'
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: dropout - 0.4
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: embed_dim - 200
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: nb_heads - 4
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: src_layer - 2
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: trg_layer - 1
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: src_hs - 400
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: trg_hs - 400
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: label_smooth - 0.0
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: tie_trg_embed - False
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: arch - <Arch.hard: 'hard'>
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: nb_sample - 4
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: wid_siz - 11
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: indtag - False
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: decode - <Decode.greedy: 'greedy'>
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: mono - False
+INFO - 10/05/22 22:55:53 - 0:00:00 - command line argument: bestacc - False
+INFO - 10/05/22 22:55:53 - 0:00:00 - src vocab size 68
+INFO - 10/05/22 22:55:53 - 0:00:00 - trg vocab size 66
+INFO - 10/05/22 22:55:53 - 0:00:00 - src vocab ['<PAD>', '<BOS>', '<EOS>', '<UNK>', '%', '.', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+INFO - 10/05/22 22:55:53 - 0:00:00 - trg vocab ['<PAD>', '<BOS>', '<EOS>', '<UNK>', '%', "'", '-', '.', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'V', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+INFO - 10/05/22 22:55:53 - 0:00:00 - model: HardAttnTransducer(
+                                       (src_embed): Embedding(68, 200, padding_idx=0)
+                                       (trg_embed): Embedding(66, 200, padding_idx=0)
+                                       (enc_rnn): LSTM(200, 400, num_layers=2, dropout=0.4, bidirectional=True)
+                                       (dec_rnn): StackedLSTM(
+                                         (layers): ModuleList(
+                                           (0): LSTMCell(200, 400)
+                                         )
+                                         (dropout): Dropout(p=0.4, inplace=False)
+                                       )
+                                       (scale_enc_hs): Linear(in_features=800, out_features=400, bias=True)
+                                       (attn): Attention()
+                                       (linear_out): Linear(in_features=1200, out_features=1200, bias=True)
+                                       (final_out): Linear(in_features=1200, out_features=66, bias=True)
+                                       (dropout): Dropout(p=0.4, inplace=False)
+                                     )
+INFO - 10/05/22 22:55:53 - 0:00:00 - number of parameter 8603666
+INFO - 10/05/22 22:55:56 - 0:00:03 - dump to init/test/large/seed-0/ndebele
+INFO - 10/05/22 22:55:56 - 0:00:03 - maximum training 32350 steps (50 epochs)
+INFO - 10/05/22 22:55:56 - 0:00:03 - evaluate every 1 epochs
+INFO - 10/05/22 22:55:56 - 0:00:03 - At 0-th epoch with lr 0.001000.
+INFO - 10/05/22 22:56:17 - 0:00:25 - Running average train loss is 0.49162281600548274 at epoch 0
+INFO - 10/05/22 22:56:17 - 0:00:25 - At 1-th epoch with lr 0.001000.
+INFO - 10/05/22 22:56:38 - 0:00:46 - Running average train loss is 0.18977915633821046 at epoch 1
+INFO - 10/05/22 22:56:39 - 0:00:46 - Average dev loss is 0.1593500286913835 at epoch 1
+INFO - 10/05/22 22:56:40 - 0:00:47 - dev accuracy is 52.7878 at epoch 1
+INFO - 10/05/22 22:56:40 - 0:00:47 - dev phenome error rate is 0.1021 at epoch 1
+INFO - 10/05/22 22:56:40 - 0:00:48 - At 2-th epoch with lr 0.001000.
+INFO - 10/05/22 22:57:01 - 0:01:09 - Running average train loss is 0.1408908652916113 at epoch 2
+INFO - 10/05/22 22:57:02 - 0:01:09 - Average dev loss is 0.11474780569282862 at epoch 2
+INFO - 10/05/22 22:57:03 - 0:01:10 - dev accuracy is 63.0396 at epoch 2
+INFO - 10/05/22 22:57:03 - 0:01:10 - dev phenome error rate is 0.0769 at epoch 2
+INFO - 10/05/22 22:57:03 - 0:01:11 - At 3-th epoch with lr 0.001000.
+INFO - 10/05/22 22:57:24 - 0:01:32 - Running average train loss is 0.11790956385358822 at epoch 3
+INFO - 10/05/22 22:57:25 - 0:01:32 - Average dev loss is 0.09780819863080978 at epoch 3
+INFO - 10/05/22 22:57:26 - 0:01:33 - dev accuracy is 68.3453 at epoch 3
+INFO - 10/05/22 22:57:26 - 0:01:33 - dev phenome error rate is 0.0637 at epoch 3
+INFO - 10/05/22 22:57:26 - 0:01:34 - At 4-th epoch with lr 0.001000.
+INFO - 10/05/22 22:57:47 - 0:01:55 - Running average train loss is 0.1049791282399844 at epoch 4
+INFO - 10/05/22 22:57:48 - 0:01:55 - Average dev loss is 0.09638903903273435 at epoch 4
+INFO - 10/05/22 22:57:49 - 0:01:56 - dev accuracy is 67.536 at epoch 4
+INFO - 10/05/22 22:57:49 - 0:01:56 - dev phenome error rate is 0.0731 at epoch 4
+INFO - 10/05/22 22:57:49 - 0:01:57 - At 5-th epoch with lr 0.001000.
+INFO - 10/05/22 22:58:10 - 0:02:18 - Running average train loss is 0.08895367248792783 at epoch 5
+INFO - 10/05/22 22:58:11 - 0:02:18 - Average dev loss is 0.07610730733722448 at epoch 5
+INFO - 10/05/22 22:58:12 - 0:02:19 - dev accuracy is 72.5719 at epoch 5
+INFO - 10/05/22 22:58:12 - 0:02:19 - dev phenome error rate is 0.0632 at epoch 5
+INFO - 10/05/22 22:58:12 - 0:02:20 - At 6-th epoch with lr 0.001000.
+INFO - 10/05/22 22:58:33 - 0:02:40 - Running average train loss is 0.07991527346678227 at epoch 6
+INFO - 10/05/22 22:58:34 - 0:02:41 - Average dev loss is 0.06491521552491647 at epoch 6
+INFO - 10/05/22 22:58:35 - 0:02:42 - dev accuracy is 75.9892 at epoch 6
+INFO - 10/05/22 22:58:35 - 0:02:42 - dev phenome error rate is 0.0434 at epoch 6
+INFO - 10/05/22 22:58:35 - 0:02:42 - At 7-th epoch with lr 0.001000.
+INFO - 10/05/22 22:58:56 - 0:03:03 - Running average train loss is 0.0726039951668629 at epoch 7
+INFO - 10/05/22 22:58:57 - 0:03:04 - Average dev loss is 0.05570994857698679 at epoch 7
+INFO - 10/05/22 22:58:58 - 0:03:05 - dev accuracy is 79.4065 at epoch 7
+INFO - 10/05/22 22:58:58 - 0:03:05 - dev phenome error rate is 0.0359 at epoch 7
+INFO - 10/05/22 22:58:58 - 0:03:05 - At 8-th epoch with lr 0.001000.
+INFO - 10/05/22 22:59:19 - 0:03:26 - Running average train loss is 0.07258728338179497 at epoch 8
+INFO - 10/05/22 22:59:19 - 0:03:27 - Average dev loss is 0.057611449965490745 at epoch 8
+INFO - 10/05/22 22:59:20 - 0:03:28 - dev accuracy is 78.777 at epoch 8
+INFO - 10/05/22 22:59:20 - 0:03:28 - dev phenome error rate is 0.0333 at epoch 8
+INFO - 10/05/22 22:59:21 - 0:03:28 - At 9-th epoch with lr 0.000500.
+INFO - 10/05/22 22:59:41 - 0:03:49 - Running average train loss is 0.05024358037451838 at epoch 9
+INFO - 10/05/22 22:59:42 - 0:03:49 - Average dev loss is 0.03958399980687178 at epoch 9
+INFO - 10/05/22 22:59:43 - 0:03:50 - dev accuracy is 84.8022 at epoch 9
+INFO - 10/05/22 22:59:43 - 0:03:50 - dev phenome error rate is 0.0189 at epoch 9
+INFO - 10/05/22 22:59:43 - 0:03:51 - At 10-th epoch with lr 0.000500.
+INFO - 10/05/22 23:00:04 - 0:04:11 - Running average train loss is 0.037618806369032656 at epoch 10
+INFO - 10/05/22 23:00:05 - 0:04:12 - Average dev loss is 0.03724256201575582 at epoch 10
+INFO - 10/05/22 23:00:06 - 0:04:13 - dev accuracy is 85.0719 at epoch 10
+INFO - 10/05/22 23:00:06 - 0:04:13 - dev phenome error rate is 0.0188 at epoch 10
+INFO - 10/05/22 23:00:06 - 0:04:13 - At 11-th epoch with lr 0.000500.
+INFO - 10/05/22 23:00:27 - 0:04:34 - Running average train loss is 0.03475692354457905 at epoch 11
+INFO - 10/05/22 23:00:27 - 0:04:35 - Average dev loss is 0.03448248553233078 at epoch 11
+INFO - 10/05/22 23:00:28 - 0:04:36 - dev accuracy is 86.0612 at epoch 11
+INFO - 10/05/22 23:00:28 - 0:04:36 - dev phenome error rate is 0.0163 at epoch 11
+INFO - 10/05/22 23:00:29 - 0:04:36 - At 12-th epoch with lr 0.000500.
+INFO - 10/05/22 23:00:49 - 0:04:57 - Running average train loss is 0.031193570750283287 at epoch 12
+INFO - 10/05/22 23:00:50 - 0:04:57 - Average dev loss is 0.033627899678853844 at epoch 12
+INFO - 10/05/22 23:00:51 - 0:04:58 - dev accuracy is 86.6007 at epoch 12
+INFO - 10/05/22 23:00:51 - 0:04:58 - dev phenome error rate is 0.0155 at epoch 12
+INFO - 10/05/22 23:00:51 - 0:04:59 - At 13-th epoch with lr 0.000500.
+INFO - 10/05/22 23:01:12 - 0:05:19 - Running average train loss is 0.029166308678690217 at epoch 13
+INFO - 10/05/22 23:01:13 - 0:05:20 - Average dev loss is 0.034678035130939235 at epoch 13
+INFO - 10/05/22 23:01:14 - 0:05:21 - dev accuracy is 87.0504 at epoch 13
+INFO - 10/05/22 23:01:14 - 0:05:21 - dev phenome error rate is 0.0147 at epoch 13
+INFO - 10/05/22 23:01:14 - 0:05:21 - At 14-th epoch with lr 0.000250.
+INFO - 10/05/22 23:01:35 - 0:05:42 - Running average train loss is 0.024079212377285455 at epoch 14
+INFO - 10/05/22 23:01:35 - 0:05:42 - Average dev loss is 0.029769491012064882 at epoch 14
+INFO - 10/05/22 23:01:36 - 0:05:44 - dev accuracy is 88.1295 at epoch 14
+INFO - 10/05/22 23:01:36 - 0:05:44 - dev phenome error rate is 0.0128 at epoch 14
+INFO - 10/05/22 23:01:36 - 0:05:44 - At 15-th epoch with lr 0.000250.
+INFO - 10/05/22 23:01:57 - 0:06:04 - Running average train loss is 0.019988961330322776 at epoch 15
+INFO - 10/05/22 23:01:58 - 0:06:05 - Average dev loss is 0.02964649055368052 at epoch 15
+INFO - 10/05/22 23:01:59 - 0:06:06 - dev accuracy is 88.5791 at epoch 15
+INFO - 10/05/22 23:01:59 - 0:06:06 - dev phenome error rate is 0.0114 at epoch 15
+INFO - 10/05/22 23:01:59 - 0:06:06 - At 16-th epoch with lr 0.000250.
+INFO - 10/05/22 23:02:20 - 0:06:27 - Running average train loss is 0.019184060291393617 at epoch 16
+INFO - 10/05/22 23:02:20 - 0:06:28 - Average dev loss is 0.029018396069295703 at epoch 16
+INFO - 10/05/22 23:02:22 - 0:06:29 - dev accuracy is 89.2086 at epoch 16
+INFO - 10/05/22 23:02:22 - 0:06:29 - dev phenome error rate is 0.0116 at epoch 16
+INFO - 10/05/22 23:02:22 - 0:06:29 - At 17-th epoch with lr 0.000250.
+INFO - 10/05/22 23:02:42 - 0:06:50 - Running average train loss is 0.017771062450076796 at epoch 17
+INFO - 10/05/22 23:02:43 - 0:06:50 - Average dev loss is 0.026349066172798093 at epoch 17
+INFO - 10/05/22 23:02:44 - 0:06:51 - dev accuracy is 89.9281 at epoch 17
+INFO - 10/05/22 23:02:44 - 0:06:51 - dev phenome error rate is 0.0111 at epoch 17
+INFO - 10/05/22 23:02:44 - 0:06:52 - At 18-th epoch with lr 0.000250.
+INFO - 10/05/22 23:03:05 - 0:07:12 - Running average train loss is 0.01770973063483935 at epoch 18
+INFO - 10/05/22 23:03:06 - 0:07:13 - Average dev loss is 0.030288367827709477 at epoch 18
+INFO - 10/05/22 23:03:07 - 0:07:14 - dev accuracy is 88.759 at epoch 18
+INFO - 10/05/22 23:03:07 - 0:07:14 - dev phenome error rate is 0.0194 at epoch 18
+INFO - 10/05/22 23:03:07 - 0:07:14 - At 19-th epoch with lr 0.000125.
+INFO - 10/05/22 23:03:28 - 0:07:35 - Running average train loss is 0.016243326206820393 at epoch 19
+INFO - 10/05/22 23:03:28 - 0:07:36 - Average dev loss is 0.02350621840271812 at epoch 19
+INFO - 10/05/22 23:03:29 - 0:07:37 - dev accuracy is 90.3777 at epoch 19
+INFO - 10/05/22 23:03:29 - 0:07:37 - dev phenome error rate is 0.0099 at epoch 19
+INFO - 10/05/22 23:03:30 - 0:07:37 - At 20-th epoch with lr 0.000125.
+INFO - 10/05/22 23:03:50 - 0:07:57 - Running average train loss is 0.014436226318805541 at epoch 20
+INFO - 10/05/22 23:03:51 - 0:07:58 - Average dev loss is 0.02346004918217659 at epoch 20
+INFO - 10/05/22 23:03:52 - 0:07:59 - dev accuracy is 90.7374 at epoch 20
+INFO - 10/05/22 23:03:52 - 0:07:59 - dev phenome error rate is 0.0091 at epoch 20
+INFO - 10/05/22 23:03:52 - 0:07:59 - At 21-th epoch with lr 0.000125.
+INFO - 10/05/22 23:04:13 - 0:08:20 - Running average train loss is 0.013319359613126186 at epoch 21
+INFO - 10/05/22 23:04:13 - 0:08:21 - Average dev loss is 0.02252364564740744 at epoch 21
+INFO - 10/05/22 23:04:14 - 0:08:22 - dev accuracy is 90.4676 at epoch 21
+INFO - 10/05/22 23:04:14 - 0:08:22 - dev phenome error rate is 0.0108 at epoch 21
+INFO - 10/05/22 23:04:15 - 0:08:22 - At 22-th epoch with lr 0.000125.
+INFO - 10/05/22 23:04:35 - 0:08:43 - Running average train loss is 0.013482618374966655 at epoch 22
+INFO - 10/05/22 23:04:36 - 0:08:43 - Average dev loss is 0.021907802955963864 at epoch 22
+INFO - 10/05/22 23:04:37 - 0:08:44 - dev accuracy is 91.0072 at epoch 22
+INFO - 10/05/22 23:04:37 - 0:08:44 - dev phenome error rate is 0.0088 at epoch 22
+INFO - 10/05/22 23:04:37 - 0:08:45 - At 23-th epoch with lr 0.000125.
+INFO - 10/05/22 23:04:58 - 0:09:05 - Running average train loss is 0.012923813626437176 at epoch 23
+INFO - 10/05/22 23:04:59 - 0:09:06 - Average dev loss is 0.022277197643863753 at epoch 23
+INFO - 10/05/22 23:05:00 - 0:09:07 - dev accuracy is 90.7374 at epoch 23
+INFO - 10/05/22 23:05:00 - 0:09:07 - dev phenome error rate is 0.0107 at epoch 23
+INFO - 10/05/22 23:05:00 - 0:09:07 - At 24-th epoch with lr 0.000063.
+INFO - 10/05/22 23:05:21 - 0:09:28 - Running average train loss is 0.012775973458788783 at epoch 24
+INFO - 10/05/22 23:05:21 - 0:09:29 - Average dev loss is 0.020116389993255816 at epoch 24
+INFO - 10/05/22 23:05:22 - 0:09:30 - dev accuracy is 90.7374 at epoch 24
+INFO - 10/05/22 23:05:22 - 0:09:30 - dev phenome error rate is 0.0105 at epoch 24
+INFO - 10/05/22 23:05:23 - 0:09:30 - At 25-th epoch with lr 0.000063.
+INFO - 10/05/22 23:05:43 - 0:09:51 - Running average train loss is 0.012062352690561436 at epoch 25
+INFO - 10/05/22 23:05:44 - 0:09:51 - Average dev loss is 0.0186673641204834 at epoch 25
+INFO - 10/05/22 23:05:45 - 0:09:52 - dev accuracy is 91.3669 at epoch 25
+INFO - 10/05/22 23:05:45 - 0:09:52 - dev phenome error rate is 0.0092 at epoch 25
+INFO - 10/05/22 23:05:45 - 0:09:52 - At 26-th epoch with lr 0.000063.
+INFO - 10/05/22 23:06:06 - 0:10:13 - Running average train loss is 0.011558283800487745 at epoch 26
+INFO - 10/05/22 23:06:06 - 0:10:14 - Average dev loss is 0.019309909385628998 at epoch 26
+INFO - 10/05/22 23:06:07 - 0:10:15 - dev accuracy is 90.7374 at epoch 26
+INFO - 10/05/22 23:06:07 - 0:10:15 - dev phenome error rate is 0.0109 at epoch 26
+INFO - 10/05/22 23:06:08 - 0:10:15 - At 27-th epoch with lr 0.000031.
+INFO - 10/05/22 23:06:28 - 0:10:36 - Running average train loss is 0.01207796333919886 at epoch 27
+INFO - 10/05/22 23:06:29 - 0:10:36 - Average dev loss is 0.017230600523404204 at epoch 27
+INFO - 10/05/22 23:06:30 - 0:10:37 - dev accuracy is 91.6367 at epoch 27
+INFO - 10/05/22 23:06:30 - 0:10:37 - dev phenome error rate is 0.0095 at epoch 27
+INFO - 10/05/22 23:06:30 - 0:10:38 - At 28-th epoch with lr 0.000031.
+INFO - 10/05/22 23:06:51 - 0:10:58 - Running average train loss is 0.010859708230200453 at epoch 28
+INFO - 10/05/22 23:06:52 - 0:10:59 - Average dev loss is 0.01687682554609357 at epoch 28
+INFO - 10/05/22 23:06:53 - 0:11:00 - dev accuracy is 91.3669 at epoch 28
+INFO - 10/05/22 23:06:53 - 0:11:00 - dev phenome error rate is 0.0098 at epoch 28
+INFO - 10/05/22 23:06:53 - 0:11:00 - At 29-th epoch with lr 0.000031.
+INFO - 10/05/22 23:07:13 - 0:11:21 - Running average train loss is 0.011358805258668041 at epoch 29
+INFO - 10/05/22 23:07:14 - 0:11:21 - Average dev loss is 0.017144019637579243 at epoch 29
+INFO - 10/05/22 23:07:15 - 0:11:23 - dev accuracy is 91.5468 at epoch 29
+INFO - 10/05/22 23:07:15 - 0:11:23 - dev phenome error rate is 0.0094 at epoch 29
+INFO - 10/05/22 23:07:15 - 0:11:23 - At 30-th epoch with lr 0.000016.
+INFO - 10/05/22 23:07:36 - 0:11:43 - Running average train loss is 0.012098104772884888 at epoch 30
+INFO - 10/05/22 23:07:37 - 0:11:44 - Average dev loss is 0.01489255216706974 at epoch 30
+INFO - 10/05/22 23:07:38 - 0:11:45 - dev accuracy is 92.536 at epoch 30
+INFO - 10/05/22 23:07:38 - 0:11:45 - dev phenome error rate is 0.009 at epoch 30
+INFO - 10/05/22 23:07:38 - 0:11:45 - At 31-th epoch with lr 0.000016.
+INFO - 10/05/22 23:07:59 - 0:12:06 - Running average train loss is 0.011531117880564698 at epoch 31
+INFO - 10/05/22 23:07:59 - 0:12:07 - Average dev loss is 0.014630680665140972 at epoch 31
+INFO - 10/05/22 23:08:01 - 0:12:08 - dev accuracy is 92.7158 at epoch 31
+INFO - 10/05/22 23:08:01 - 0:12:08 - dev phenome error rate is 0.0086 at epoch 31
+INFO - 10/05/22 23:08:01 - 0:12:08 - At 32-th epoch with lr 0.000016.
+INFO - 10/05/22 23:08:21 - 0:12:29 - Running average train loss is 0.011548527302081916 at epoch 32
+INFO - 10/05/22 23:08:22 - 0:12:29 - Average dev loss is 0.014507675552830243 at epoch 32
+INFO - 10/05/22 23:08:23 - 0:12:30 - dev accuracy is 92.6259 at epoch 32
+INFO - 10/05/22 23:08:23 - 0:12:30 - dev phenome error rate is 0.0088 at epoch 32
+INFO - 10/05/22 23:08:23 - 0:12:31 - At 33-th epoch with lr 0.000016.
+INFO - 10/05/22 23:08:44 - 0:12:51 - Running average train loss is 0.011367595614892412 at epoch 33
+INFO - 10/05/22 23:08:45 - 0:12:52 - Average dev loss is 0.01437400265265471 at epoch 33
+INFO - 10/05/22 23:08:46 - 0:12:53 - dev accuracy is 92.8957 at epoch 33
+INFO - 10/05/22 23:08:46 - 0:12:53 - dev phenome error rate is 0.0083 at epoch 33
+INFO - 10/05/22 23:08:46 - 0:12:53 - At 34-th epoch with lr 0.000016.
+INFO - 10/05/22 23:09:07 - 0:13:14 - Running average train loss is 0.011498019592291308 at epoch 34
+INFO - 10/05/22 23:09:07 - 0:13:15 - Average dev loss is 0.014211456104217528 at epoch 34
+INFO - 10/05/22 23:09:09 - 0:13:16 - dev accuracy is 92.8957 at epoch 34
+INFO - 10/05/22 23:09:09 - 0:13:16 - dev phenome error rate is 0.0083 at epoch 34
+INFO - 10/05/22 23:09:09 - 0:13:16 - At 35-th epoch with lr 0.000016.
+INFO - 10/05/22 23:09:30 - 0:13:37 - Running average train loss is 0.011176761196853544 at epoch 35
+INFO - 10/05/22 23:09:30 - 0:13:38 - Average dev loss is 0.013893012119045195 at epoch 35
+INFO - 10/05/22 23:09:31 - 0:13:39 - dev accuracy is 93.0755 at epoch 35
+INFO - 10/05/22 23:09:31 - 0:13:39 - dev phenome error rate is 0.0081 at epoch 35
+INFO - 10/05/22 23:09:32 - 0:13:39 - At 36-th epoch with lr 0.000016.
+INFO - 10/05/22 23:09:52 - 0:14:00 - Running average train loss is 0.011121696293414491 at epoch 36
+INFO - 10/05/22 23:09:53 - 0:14:00 - Average dev loss is 0.013910743523424921 at epoch 36
+INFO - 10/05/22 23:09:54 - 0:14:01 - dev accuracy is 93.0755 at epoch 36
+INFO - 10/05/22 23:09:54 - 0:14:01 - dev phenome error rate is 0.0083 at epoch 36
+INFO - 10/05/22 23:09:54 - 0:14:02 - At 37-th epoch with lr 0.000010.
+INFO - 10/05/22 23:10:15 - 0:14:22 - Running average train loss is 0.012223447178347596 at epoch 37
+INFO - 10/05/22 23:10:16 - 0:14:23 - Average dev loss is 0.012471754611648905 at epoch 37
+INFO - 10/05/22 23:10:17 - 0:14:24 - dev accuracy is 93.4353 at epoch 37
+INFO - 10/05/22 23:10:17 - 0:14:24 - dev phenome error rate is 0.008 at epoch 37
+INFO - 10/05/22 23:10:17 - 0:14:24 - At 38-th epoch with lr 0.000010.
+INFO - 10/05/22 23:10:38 - 0:14:45 - Running average train loss is 0.011637042403142681 at epoch 38
+INFO - 10/05/22 23:10:38 - 0:14:46 - Average dev loss is 0.012350588738739204 at epoch 38
+INFO - 10/05/22 23:10:39 - 0:14:47 - dev accuracy is 93.4353 at epoch 38
+INFO - 10/05/22 23:10:39 - 0:14:47 - dev phenome error rate is 0.0082 at epoch 38
+INFO - 10/05/22 23:10:40 - 0:14:47 - At 39-th epoch with lr 0.000010.
+INFO - 10/05/22 23:11:01 - 0:15:08 - Running average train loss is 0.011531664033600675 at epoch 39
+INFO - 10/05/22 23:11:01 - 0:15:08 - Average dev loss is 0.012161509873112663 at epoch 39
+INFO - 10/05/22 23:11:02 - 0:15:10 - dev accuracy is 93.6151 at epoch 39
+INFO - 10/05/22 23:11:02 - 0:15:10 - dev phenome error rate is 0.0079 at epoch 39
+INFO - 10/05/22 23:11:02 - 0:15:10 - At 40-th epoch with lr 0.000010.
+INFO - 10/05/22 23:11:23 - 0:15:31 - Running average train loss is 0.011419900860065247 at epoch 40
+INFO - 10/05/22 23:11:24 - 0:15:31 - Average dev loss is 0.012148647212262194 at epoch 40
+INFO - 10/05/22 23:11:25 - 0:15:32 - dev accuracy is 93.705 at epoch 40
+INFO - 10/05/22 23:11:25 - 0:15:32 - dev phenome error rate is 0.0077 at epoch 40
+INFO - 10/05/22 23:11:25 - 0:15:32 - At 41-th epoch with lr 0.000010.
+INFO - 10/05/22 23:11:46 - 0:15:53 - Running average train loss is 0.011634313907071954 at epoch 41
+INFO - 10/05/22 23:11:47 - 0:15:54 - Average dev loss is 0.012073423668222788 at epoch 41
+INFO - 10/05/22 23:11:48 - 0:15:55 - dev accuracy is 93.8849 at epoch 41
+INFO - 10/05/22 23:11:48 - 0:15:55 - dev phenome error rate is 0.0077 at epoch 41
+INFO - 10/05/22 23:11:48 - 0:15:55 - At 42-th epoch with lr 0.000010.
+INFO - 10/05/22 23:12:09 - 0:16:16 - Running average train loss is 0.011542739860956028 at epoch 42
+INFO - 10/05/22 23:12:09 - 0:16:17 - Average dev loss is 0.01208703550689209 at epoch 42
+INFO - 10/05/22 23:12:10 - 0:16:18 - dev accuracy is 93.795 at epoch 42
+INFO - 10/05/22 23:12:10 - 0:16:18 - dev phenome error rate is 0.0078 at epoch 42
+INFO - 10/05/22 23:12:10 - 0:16:18 - Early stopping triggered with epoch 42 (previous dev loss: 0.012073, current: 0.012087)
+INFO - 10/05/22 23:12:10 - 0:16:18 - loading model/test/hardattention/large/hard/ndebele.nll_0.0121.acc_93.8849.per_0.0077.epoch_41 for testing
+INFO - 10/05/22 23:12:10 - 0:16:18 - load model in model/test/hardattention/large/hard/ndebele.nll_0.0121.acc_93.8849.per_0.0077.epoch_41
+INFO - 10/05/22 23:12:11 - 0:16:18 - Average dev loss is 0.012073424986402433 at epoch -1
+INFO - 10/05/22 23:12:11 - 0:16:18 - decoding dev set
+INFO - 10/05/22 23:12:13 - 0:16:20 - finished decoding 1292 dev instance
+INFO - 10/05/22 23:12:13 - 0:16:20 - DEV accuracy is 93.8849 at epoch -1
+INFO - 10/05/22 23:12:13 - 0:16:20 - DEV phenome error rate is 0.0077 at epoch -1
+INFO - 10/05/22 23:12:13 - 0:16:20 - DEV ndebele acc 93.8849 per 0.0077
+INFO - 10/05/22 23:12:14 - 0:16:22 - Average test loss is 0.36760667694034055 at epoch -1
+INFO - 10/05/22 23:12:14 - 0:16:22 - decoding test set
+INFO - 10/05/22 23:12:18 - 0:16:26 - finished decoding 2552 test instance
+INFO - 10/05/22 23:12:18 - 0:16:26 - TEST accuracy is 53.6168 at epoch -1
+INFO - 10/05/22 23:12:18 - 0:16:26 - TEST phenome error rate is 0.106 at epoch -1
+INFO - 10/05/22 23:12:18 - 0:16:26 - TEST ndebele acc 53.6168 per 0.106
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: seed - 0
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: train - ['data/ndebele/ndebele.train']
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: dev - ['data/ndebele/ndebele.dev']
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: test - ['data/ndebele/ndebele.test']
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: model - 'model/test/hardattention/large/hard/ndebele'
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: load - ''
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: bs - 20
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: epochs - 50
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: max_steps - 0
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: warmup_steps - 4000
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: total_eval - -1
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: optimizer - <Optimizer.adam: 'adam'>
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: scheduler - <Scheduler.reducewhenstuck: 'reducewhenstuck'>
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: lr - 0.001
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: min_lr - 1e-05
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: momentum - 0.9
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: beta1 - 0.9
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: beta2 - 0.999
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: estop - 1e-08
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: cooldown - 0
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: patience - 0
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: discount_factor - 0.5
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: max_norm - 5.0
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: gpuid - [0]
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: loglevel - 'info'
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: saveall - False
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: shuffle - False
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: cleanup_anyway - False
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: dataset - <Data.g2p: 'g2p'>
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: max_seq_len - 128
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: max_decode_len - 128
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: decode_beam_size - 5
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: init - 'init/test/large/seed-0/ndebele'
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: dropout - 0.5
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: embed_dim - 200
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: nb_heads - 4
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: src_layer - 2
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: trg_layer - 1
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: src_hs - 400
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: trg_hs - 400
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: label_smooth - 0.0
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: tie_trg_embed - False
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: arch - <Arch.hard: 'hard'>
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: nb_sample - 4
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: wid_siz - 11
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: indtag - False
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: decode - <Decode.greedy: 'greedy'>
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: mono - False
+INFO - 10/14/22 14:56:42 - 0:00:00 - command line argument: bestacc - False
+INFO - 10/14/22 14:56:42 - 0:00:00 - src vocab size 68
+INFO - 10/14/22 14:56:42 - 0:00:00 - trg vocab size 66
+INFO - 10/14/22 14:56:42 - 0:00:00 - src vocab ['<PAD>', '<BOS>', '<EOS>', '<UNK>', '%', '.', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+INFO - 10/14/22 14:56:42 - 0:00:00 - trg vocab ['<PAD>', '<BOS>', '<EOS>', '<UNK>', '%', "'", '-', '.', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'V', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+INFO - 10/14/22 14:56:42 - 0:00:00 - model: HardAttnTransducer(
+                                       (src_embed): Embedding(68, 200, padding_idx=0)
+                                       (trg_embed): Embedding(66, 200, padding_idx=0)
+                                       (enc_rnn): LSTM(200, 400, num_layers=2, dropout=0.5, bidirectional=True)
+                                       (dec_rnn): StackedLSTM(
+                                         (layers): ModuleList(
+                                           (0): LSTMCell(200, 400)
+                                         )
+                                         (dropout): Dropout(p=0.5, inplace=False)
+                                       )
+                                       (scale_enc_hs): Linear(in_features=800, out_features=400, bias=True)
+                                       (attn): Attention()
+                                       (linear_out): Linear(in_features=1200, out_features=1200, bias=True)
+                                       (final_out): Linear(in_features=1200, out_features=66, bias=True)
+                                       (dropout): Dropout(p=0.5, inplace=False)
+                                     )
+INFO - 10/14/22 14:56:42 - 0:00:00 - number of parameter 8603666
+INFO - 10/14/22 14:56:45 - 0:00:03 - load from init/test/large/seed-0/ndebele
+INFO - 10/14/22 14:56:45 - 0:00:03 - maximum training 32350 steps (50 epochs)
+INFO - 10/14/22 14:56:45 - 0:00:03 - evaluate every 1 epochs
+INFO - 10/14/22 14:56:45 - 0:00:03 - At 0-th epoch with lr 0.001000.
+INFO - 10/14/22 14:57:05 - 0:00:24 - Running average train loss is 0.54567233701071 at epoch 0
+INFO - 10/14/22 14:57:05 - 0:00:24 - At 1-th epoch with lr 0.001000.
+INFO - 10/14/22 14:57:25 - 0:00:44 - Running average train loss is 0.2089472495457028 at epoch 1
+INFO - 10/14/22 14:57:26 - 0:00:44 - Average dev loss is 0.15418707837279028 at epoch 1
+INFO - 10/14/22 14:57:27 - 0:00:46 - dev accuracy is 50.9892 at epoch 1
+INFO - 10/14/22 14:57:27 - 0:00:46 - dev phenome error rate is 0.1053 at epoch 1
+INFO - 10/14/22 14:57:28 - 0:00:46 - At 2-th epoch with lr 0.001000.
+INFO - 10/14/22 14:57:47 - 0:01:05 - Running average train loss is 0.16263725843505109 at epoch 2
+INFO - 10/14/22 14:57:47 - 0:01:06 - Average dev loss is 0.11396044853788156 at epoch 2
+INFO - 10/14/22 14:57:48 - 0:01:07 - dev accuracy is 64.4784 at epoch 2
+INFO - 10/14/22 14:57:48 - 0:01:07 - dev phenome error rate is 0.0637 at epoch 2
+INFO - 10/14/22 14:57:48 - 0:01:07 - At 3-th epoch with lr 0.001000.
+INFO - 10/14/22 14:58:08 - 0:01:26 - Running average train loss is 0.1317118366365501 at epoch 3
+INFO - 10/14/22 14:58:08 - 0:01:27 - Average dev loss is 0.11196963635201637 at epoch 3
+INFO - 10/14/22 14:58:09 - 0:01:28 - dev accuracy is 64.8381 at epoch 3
+INFO - 10/14/22 14:58:09 - 0:01:28 - dev phenome error rate is 0.0623 at epoch 3
+INFO - 10/14/22 14:58:09 - 0:01:28 - At 4-th epoch with lr 0.001000.
+INFO - 10/14/22 14:58:29 - 0:01:47 - Running average train loss is 0.12115928684857888 at epoch 4
+INFO - 10/14/22 14:58:29 - 0:01:48 - Average dev loss is 0.08450258182218441 at epoch 4
+INFO - 10/14/22 14:58:30 - 0:01:49 - dev accuracy is 69.964 at epoch 4
+INFO - 10/14/22 14:58:30 - 0:01:49 - dev phenome error rate is 0.0598 at epoch 4
+INFO - 10/14/22 14:58:31 - 0:01:49 - At 5-th epoch with lr 0.001000.
+INFO - 10/14/22 14:58:50 - 0:02:08 - Running average train loss is 0.10441281034940798 at epoch 5
+INFO - 10/14/22 14:58:50 - 0:02:09 - Average dev loss is 0.07557608096931989 at epoch 5
+INFO - 10/14/22 14:58:51 - 0:02:10 - dev accuracy is 72.9317 at epoch 5
+INFO - 10/14/22 14:58:51 - 0:02:10 - dev phenome error rate is 0.0489 at epoch 5
+INFO - 10/14/22 14:58:52 - 0:02:10 - At 6-th epoch with lr 0.001000.
+INFO - 10/14/22 14:59:11 - 0:02:29 - Running average train loss is 0.09602467747839885 at epoch 6
+INFO - 10/14/22 14:59:11 - 0:02:30 - Average dev loss is 0.06610008538342439 at epoch 6
+INFO - 10/14/22 14:59:12 - 0:02:31 - dev accuracy is 75.6295 at epoch 6
+INFO - 10/14/22 14:59:12 - 0:02:31 - dev phenome error rate is 0.0468 at epoch 6
+INFO - 10/14/22 14:59:13 - 0:02:31 - At 7-th epoch with lr 0.001000.
+INFO - 10/14/22 14:59:32 - 0:02:50 - Running average train loss is 0.08778257581075709 at epoch 7
+INFO - 10/14/22 14:59:32 - 0:02:51 - Average dev loss is 0.06507874919244876 at epoch 7
+INFO - 10/14/22 14:59:33 - 0:02:52 - dev accuracy is 75.8094 at epoch 7
+INFO - 10/14/22 14:59:33 - 0:02:52 - dev phenome error rate is 0.0423 at epoch 7
+INFO - 10/14/22 14:59:34 - 0:02:52 - At 8-th epoch with lr 0.001000.
+INFO - 10/14/22 14:59:53 - 0:03:11 - Running average train loss is 0.08563032514419999 at epoch 8
+INFO - 10/14/22 14:59:53 - 0:03:12 - Average dev loss is 0.056566676726708044 at epoch 8
+INFO - 10/14/22 14:59:54 - 0:03:13 - dev accuracy is 78.777 at epoch 8
+INFO - 10/14/22 14:59:54 - 0:03:13 - dev phenome error rate is 0.0343 at epoch 8
+INFO - 10/14/22 14:59:55 - 0:03:13 - At 9-th epoch with lr 0.001000.
+INFO - 10/14/22 15:00:14 - 0:03:32 - Running average train loss is 0.07968416037484197 at epoch 9
+INFO - 10/14/22 15:00:14 - 0:03:33 - Average dev loss is 0.05309856662956568 at epoch 9
+INFO - 10/14/22 15:00:16 - 0:03:34 - dev accuracy is 80.036 at epoch 9
+INFO - 10/14/22 15:00:16 - 0:03:34 - dev phenome error rate is 0.029 at epoch 9
+INFO - 10/14/22 15:00:16 - 0:03:34 - At 10-th epoch with lr 0.001000.
+INFO - 10/14/22 15:00:35 - 0:03:53 - Running average train loss is 0.07516111129782575 at epoch 10
+INFO - 10/14/22 15:00:36 - 0:03:54 - Average dev loss is 0.05152608736131627 at epoch 10
+INFO - 10/14/22 15:00:37 - 0:03:55 - dev accuracy is 80.4856 at epoch 10
+INFO - 10/14/22 15:00:37 - 0:03:55 - dev phenome error rate is 0.0387 at epoch 10
+INFO - 10/14/22 15:00:37 - 0:03:55 - At 11-th epoch with lr 0.001000.
+INFO - 10/14/22 15:00:56 - 0:04:14 - Running average train loss is 0.071204208925804 at epoch 11
+INFO - 10/14/22 15:00:57 - 0:04:15 - Average dev loss is 0.05068800074693102 at epoch 11
+INFO - 10/14/22 15:00:58 - 0:04:16 - dev accuracy is 80.1259 at epoch 11
+INFO - 10/14/22 15:00:58 - 0:04:16 - dev phenome error rate is 0.029 at epoch 11
+INFO - 10/14/22 15:00:58 - 0:04:16 - At 12-th epoch with lr 0.001000.
+INFO - 10/14/22 15:01:17 - 0:04:36 - Running average train loss is 0.06615222513767814 at epoch 12
+INFO - 10/14/22 15:01:18 - 0:04:36 - Average dev loss is 0.048468692371478446 at epoch 12
+INFO - 10/14/22 15:01:19 - 0:04:37 - dev accuracy is 81.5647 at epoch 12
+INFO - 10/14/22 15:01:19 - 0:04:37 - dev phenome error rate is 0.0259 at epoch 12
+INFO - 10/14/22 15:01:19 - 0:04:38 - At 13-th epoch with lr 0.001000.
+INFO - 10/14/22 15:01:39 - 0:04:57 - Running average train loss is 0.06436568287444493 at epoch 13
+INFO - 10/14/22 15:01:39 - 0:04:58 - Average dev loss is 0.045064599353533526 at epoch 13
+INFO - 10/14/22 15:01:40 - 0:04:59 - dev accuracy is 82.554 at epoch 13
+INFO - 10/14/22 15:01:40 - 0:04:59 - dev phenome error rate is 0.0243 at epoch 13
+INFO - 10/14/22 15:01:40 - 0:04:59 - At 14-th epoch with lr 0.001000.
+INFO - 10/14/22 15:02:00 - 0:05:18 - Running average train loss is 0.06785629718950223 at epoch 14
+INFO - 10/14/22 15:02:00 - 0:05:19 - Average dev loss is 0.04850742758896488 at epoch 14
+INFO - 10/14/22 15:02:01 - 0:05:20 - dev accuracy is 81.9245 at epoch 14
+INFO - 10/14/22 15:02:01 - 0:05:20 - dev phenome error rate is 0.0262 at epoch 14
+INFO - 10/14/22 15:02:02 - 0:05:20 - At 15-th epoch with lr 0.000500.
+INFO - 10/14/22 15:02:21 - 0:05:40 - Running average train loss is 0.05067142598846297 at epoch 15
+INFO - 10/14/22 15:02:22 - 0:05:40 - Average dev loss is 0.0378016519252784 at epoch 15
+INFO - 10/14/22 15:02:23 - 0:05:41 - dev accuracy is 84.982 at epoch 15
+INFO - 10/14/22 15:02:23 - 0:05:41 - dev phenome error rate is 0.0226 at epoch 15
+INFO - 10/14/22 15:02:23 - 0:05:41 - At 16-th epoch with lr 0.000500.
+INFO - 10/14/22 15:02:43 - 0:06:01 - Running average train loss is 0.03994918161955658 at epoch 16
+INFO - 10/14/22 15:02:43 - 0:06:02 - Average dev loss is 0.03419525991552151 at epoch 16
+INFO - 10/14/22 15:02:44 - 0:06:03 - dev accuracy is 86.0612 at epoch 16
+INFO - 10/14/22 15:02:44 - 0:06:03 - dev phenome error rate is 0.0167 at epoch 16
+INFO - 10/14/22 15:02:44 - 0:06:03 - At 17-th epoch with lr 0.000500.
+INFO - 10/14/22 15:03:04 - 0:06:22 - Running average train loss is 0.03573646660033366 at epoch 17
+INFO - 10/14/22 15:03:04 - 0:06:23 - Average dev loss is 0.03561890840781136 at epoch 17
+INFO - 10/14/22 15:03:06 - 0:06:24 - dev accuracy is 86.5108 at epoch 17
+INFO - 10/14/22 15:03:06 - 0:06:24 - dev phenome error rate is 0.0185 at epoch 17
+INFO - 10/14/22 15:03:06 - 0:06:24 - At 18-th epoch with lr 0.000250.
+INFO - 10/14/22 15:03:25 - 0:06:44 - Running average train loss is 0.030067041325217352 at epoch 18
+INFO - 10/14/22 15:03:26 - 0:06:44 - Average dev loss is 0.029172110833370915 at epoch 18
+INFO - 10/14/22 15:03:27 - 0:06:45 - dev accuracy is 87.3201 at epoch 18
+INFO - 10/14/22 15:03:27 - 0:06:45 - dev phenome error rate is 0.0173 at epoch 18
+INFO - 10/14/22 15:03:27 - 0:06:46 - At 19-th epoch with lr 0.000250.
+INFO - 10/14/22 15:03:47 - 0:07:05 - Running average train loss is 0.02697806050130087 at epoch 19
+INFO - 10/14/22 15:03:47 - 0:07:06 - Average dev loss is 0.027959240017494617 at epoch 19
+INFO - 10/14/22 15:03:48 - 0:07:07 - dev accuracy is 88.1295 at epoch 19
+INFO - 10/14/22 15:03:48 - 0:07:07 - dev phenome error rate is 0.0175 at epoch 19
+INFO - 10/14/22 15:03:49 - 0:07:07 - At 20-th epoch with lr 0.000250.
+INFO - 10/14/22 15:04:08 - 0:07:26 - Running average train loss is 0.024557509880413633 at epoch 20
+INFO - 10/14/22 15:04:08 - 0:07:27 - Average dev loss is 0.02530975050937671 at epoch 20
+INFO - 10/14/22 15:04:09 - 0:07:28 - dev accuracy is 88.9388 at epoch 20
+INFO - 10/14/22 15:04:09 - 0:07:28 - dev phenome error rate is 0.0112 at epoch 20
+INFO - 10/14/22 15:04:10 - 0:07:28 - At 21-th epoch with lr 0.000250.
+INFO - 10/14/22 15:04:29 - 0:07:47 - Running average train loss is 0.023307760104132526 at epoch 21
+INFO - 10/14/22 15:04:29 - 0:07:48 - Average dev loss is 0.0254445623454208 at epoch 21
+INFO - 10/14/22 15:04:31 - 0:07:49 - dev accuracy is 89.5683 at epoch 21
+INFO - 10/14/22 15:04:31 - 0:07:49 - dev phenome error rate is 0.0109 at epoch 21
+INFO - 10/14/22 15:04:31 - 0:07:49 - At 22-th epoch with lr 0.000125.
+INFO - 10/14/22 15:04:50 - 0:08:08 - Running average train loss is 0.022049403591247036 at epoch 22
+INFO - 10/14/22 15:04:50 - 0:08:09 - Average dev loss is 0.021760428249119567 at epoch 22
+INFO - 10/14/22 15:04:52 - 0:08:10 - dev accuracy is 90.5576 at epoch 22
+INFO - 10/14/22 15:04:52 - 0:08:10 - dev phenome error rate is 0.0094 at epoch 22
+INFO - 10/14/22 15:04:52 - 0:08:10 - At 23-th epoch with lr 0.000125.
+INFO - 10/14/22 15:05:11 - 0:08:29 - Running average train loss is 0.020088339929427185 at epoch 23
+INFO - 10/14/22 15:05:11 - 0:08:30 - Average dev loss is 0.02148840047705632 at epoch 23
+INFO - 10/14/22 15:05:12 - 0:08:31 - dev accuracy is 90.9173 at epoch 23
+INFO - 10/14/22 15:05:12 - 0:08:31 - dev phenome error rate is 0.0093 at epoch 23
+INFO - 10/14/22 15:05:13 - 0:08:31 - At 24-th epoch with lr 0.000125.
+INFO - 10/14/22 15:05:32 - 0:08:50 - Running average train loss is 0.019704975917038594 at epoch 24
+INFO - 10/14/22 15:05:32 - 0:08:51 - Average dev loss is 0.022156853830585112 at epoch 24
+INFO - 10/14/22 15:05:33 - 0:08:52 - dev accuracy is 89.8381 at epoch 24
+INFO - 10/14/22 15:05:33 - 0:08:52 - dev phenome error rate is 0.0112 at epoch 24
+INFO - 10/14/22 15:05:33 - 0:08:52 - At 25-th epoch with lr 0.000063.
+INFO - 10/14/22 15:05:52 - 0:09:11 - Running average train loss is 0.01892826135538035 at epoch 25
+INFO - 10/14/22 15:05:53 - 0:09:11 - Average dev loss is 0.019540321193814564 at epoch 25
+INFO - 10/14/22 15:05:54 - 0:09:12 - dev accuracy is 90.4676 at epoch 25
+INFO - 10/14/22 15:05:54 - 0:09:12 - dev phenome error rate is 0.0108 at epoch 25
+INFO - 10/14/22 15:05:54 - 0:09:13 - At 26-th epoch with lr 0.000063.
+INFO - 10/14/22 15:06:13 - 0:09:32 - Running average train loss is 0.018086925231732165 at epoch 26
+INFO - 10/14/22 15:06:14 - 0:09:32 - Average dev loss is 0.019435377759285843 at epoch 26
+INFO - 10/14/22 15:06:15 - 0:09:33 - dev accuracy is 90.4676 at epoch 26
+INFO - 10/14/22 15:06:15 - 0:09:33 - dev phenome error rate is 0.0109 at epoch 26
+INFO - 10/14/22 15:06:15 - 0:09:34 - At 27-th epoch with lr 0.000063.
+INFO - 10/14/22 15:06:34 - 0:09:52 - Running average train loss is 0.017890276363762916 at epoch 27
+INFO - 10/14/22 15:06:35 - 0:09:53 - Average dev loss is 0.01936584717970198 at epoch 27
+INFO - 10/14/22 15:06:36 - 0:09:54 - dev accuracy is 90.2878 at epoch 27
+INFO - 10/14/22 15:06:36 - 0:09:54 - dev phenome error rate is 0.0111 at epoch 27
+INFO - 10/14/22 15:06:36 - 0:09:54 - At 28-th epoch with lr 0.000063.
+INFO - 10/14/22 15:06:55 - 0:10:13 - Running average train loss is 0.01688288825411505 at epoch 28
+INFO - 10/14/22 15:06:55 - 0:10:14 - Average dev loss is 0.019431876523706777 at epoch 28
+INFO - 10/14/22 15:06:56 - 0:10:15 - dev accuracy is 90.5576 at epoch 28
+INFO - 10/14/22 15:06:56 - 0:10:15 - dev phenome error rate is 0.0105 at epoch 28
+INFO - 10/14/22 15:06:57 - 0:10:15 - At 29-th epoch with lr 0.000031.
+INFO - 10/14/22 15:07:16 - 0:10:34 - Running average train loss is 0.017431233913660728 at epoch 29
+INFO - 10/14/22 15:07:16 - 0:10:35 - Average dev loss is 0.01729825168955498 at epoch 29
+INFO - 10/14/22 15:07:17 - 0:10:36 - dev accuracy is 91.277 at epoch 29
+INFO - 10/14/22 15:07:17 - 0:10:36 - dev phenome error rate is 0.0099 at epoch 29
+INFO - 10/14/22 15:07:18 - 0:10:36 - At 30-th epoch with lr 0.000031.
+INFO - 10/14/22 15:07:37 - 0:10:55 - Running average train loss is 0.01739945021814953 at epoch 30
+INFO - 10/14/22 15:07:37 - 0:10:56 - Average dev loss is 0.016937550698192073 at epoch 30
+INFO - 10/14/22 15:07:38 - 0:10:57 - dev accuracy is 91.277 at epoch 30
+INFO - 10/14/22 15:07:38 - 0:10:57 - dev phenome error rate is 0.0097 at epoch 30
+INFO - 10/14/22 15:07:39 - 0:10:57 - At 31-th epoch with lr 0.000031.
+INFO - 10/14/22 15:07:58 - 0:11:16 - Running average train loss is 0.016675882500278228 at epoch 31
+INFO - 10/14/22 15:07:58 - 0:11:17 - Average dev loss is 0.01673057367846083 at epoch 31
+INFO - 10/14/22 15:07:59 - 0:11:18 - dev accuracy is 91.5468 at epoch 31
+INFO - 10/14/22 15:07:59 - 0:11:18 - dev phenome error rate is 0.0095 at epoch 31
+INFO - 10/14/22 15:07:59 - 0:11:18 - At 32-th epoch with lr 0.000031.
+INFO - 10/14/22 15:08:19 - 0:11:37 - Running average train loss is 0.016618164668796755 at epoch 32
+INFO - 10/14/22 15:08:19 - 0:11:38 - Average dev loss is 0.01693315457445211 at epoch 32
+INFO - 10/14/22 15:08:20 - 0:11:39 - dev accuracy is 91.5468 at epoch 32
+INFO - 10/14/22 15:08:20 - 0:11:39 - dev phenome error rate is 0.0094 at epoch 32
+INFO - 10/14/22 15:08:21 - 0:11:39 - At 33-th epoch with lr 0.000016.
+INFO - 10/14/22 15:08:40 - 0:11:58 - Running average train loss is 0.017763995171335298 at epoch 33
+INFO - 10/14/22 15:08:41 - 0:11:59 - Average dev loss is 0.015724967420101165 at epoch 33
+INFO - 10/14/22 15:08:42 - 0:12:00 - dev accuracy is 91.9964 at epoch 33
+INFO - 10/14/22 15:08:42 - 0:12:00 - dev phenome error rate is 0.0092 at epoch 33
+INFO - 10/14/22 15:08:42 - 0:12:00 - At 34-th epoch with lr 0.000016.
+INFO - 10/14/22 15:09:02 - 0:12:20 - Running average train loss is 0.01716348481954002 at epoch 34
+INFO - 10/14/22 15:09:03 - 0:12:21 - Average dev loss is 0.01526362122161887 at epoch 34
+INFO - 10/14/22 15:09:04 - 0:12:22 - dev accuracy is 92.1763 at epoch 34
+INFO - 10/14/22 15:09:04 - 0:12:22 - dev phenome error rate is 0.0091 at epoch 34
+INFO - 10/14/22 15:09:04 - 0:12:22 - At 35-th epoch with lr 0.000016.
+INFO - 10/14/22 15:09:24 - 0:12:42 - Running average train loss is 0.016957065928295555 at epoch 35
+INFO - 10/14/22 15:09:25 - 0:12:43 - Average dev loss is 0.015044891953360862 at epoch 35
+INFO - 10/14/22 15:09:26 - 0:12:44 - dev accuracy is 91.9964 at epoch 35
+INFO - 10/14/22 15:09:26 - 0:12:44 - dev phenome error rate is 0.0094 at epoch 35
+INFO - 10/14/22 15:09:26 - 0:12:44 - At 36-th epoch with lr 0.000016.
+INFO - 10/14/22 15:09:46 - 0:13:04 - Running average train loss is 0.01651873534679891 at epoch 36
+INFO - 10/14/22 15:09:47 - 0:13:05 - Average dev loss is 0.01494429789734288 at epoch 36
+INFO - 10/14/22 15:09:48 - 0:13:06 - dev accuracy is 92.0863 at epoch 36
+INFO - 10/14/22 15:09:48 - 0:13:06 - dev phenome error rate is 0.0094 at epoch 36
+INFO - 10/14/22 15:09:48 - 0:13:06 - At 37-th epoch with lr 0.000016.
+INFO - 10/14/22 15:10:07 - 0:13:26 - Running average train loss is 0.016638023569716436 at epoch 37
+INFO - 10/14/22 15:10:08 - 0:13:26 - Average dev loss is 0.014999885217716488 at epoch 37
+INFO - 10/14/22 15:10:09 - 0:13:27 - dev accuracy is 92.0863 at epoch 37
+INFO - 10/14/22 15:10:09 - 0:13:27 - dev phenome error rate is 0.0094 at epoch 37
+INFO - 10/14/22 15:10:09 - 0:13:27 - At 38-th epoch with lr 0.000010.
+INFO - 10/14/22 15:10:28 - 0:13:47 - Running average train loss is 0.01751104640312726 at epoch 38
+INFO - 10/14/22 15:10:29 - 0:13:47 - Average dev loss is 0.013928654153222362 at epoch 38
+INFO - 10/14/22 15:10:30 - 0:13:48 - dev accuracy is 92.3561 at epoch 38
+INFO - 10/14/22 15:10:30 - 0:13:48 - dev phenome error rate is 0.0091 at epoch 38
+INFO - 10/14/22 15:10:30 - 0:13:49 - At 39-th epoch with lr 0.000010.
+INFO - 10/14/22 15:10:50 - 0:14:08 - Running average train loss is 0.017287996196342054 at epoch 39
+INFO - 10/14/22 15:10:50 - 0:14:09 - Average dev loss is 0.013948338123289153 at epoch 39
+INFO - 10/14/22 15:10:51 - 0:14:10 - dev accuracy is 92.536 at epoch 39
+INFO - 10/14/22 15:10:51 - 0:14:10 - dev phenome error rate is 0.0088 at epoch 39
+INFO - 10/14/22 15:10:51 - 0:14:10 - Early stopping triggered with epoch 39 (previous dev loss: 0.013929, current: 0.013948)
+INFO - 10/14/22 15:10:51 - 0:14:10 - loading model/test/hardattention/large/hard/ndebele.nll_0.0139.acc_92.3561.per_0.0091.epoch_38 for testing
+INFO - 10/14/22 15:10:51 - 0:14:10 - load model in model/test/hardattention/large/hard/ndebele.nll_0.0139.acc_92.3561.per_0.0091.epoch_38
+INFO - 10/14/22 15:10:52 - 0:14:10 - Average dev loss is 0.013928654443365163 at epoch -1
+INFO - 10/14/22 15:10:52 - 0:14:10 - decoding dev set
+INFO - 10/14/22 15:10:54 - 0:14:12 - finished decoding 1292 dev instance
+INFO - 10/14/22 15:10:54 - 0:14:12 - DEV accuracy is 92.3561 at epoch -1
+INFO - 10/14/22 15:10:54 - 0:14:12 - DEV phenome error rate is 0.0091 at epoch -1
+INFO - 10/14/22 15:10:54 - 0:14:12 - DEV ndebele acc 92.3561 per 0.0091
+INFO - 10/14/22 15:10:55 - 0:14:14 - Average test loss is 0.3480930533260107 at epoch -1
+INFO - 10/14/22 15:10:55 - 0:14:14 - decoding test set
+INFO - 10/14/22 15:10:59 - 0:14:17 - finished decoding 2552 test instance
+INFO - 10/14/22 15:10:59 - 0:14:17 - TEST accuracy is 52.899 at epoch -1
+INFO - 10/14/22 15:10:59 - 0:14:17 - TEST phenome error rate is 0.1062 at epoch -1
+INFO - 10/14/22 15:10:59 - 0:14:17 - TEST ndebele acc 52.899 per 0.1062
