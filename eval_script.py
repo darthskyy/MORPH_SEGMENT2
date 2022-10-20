@@ -42,22 +42,23 @@ def main():
     n = len(sys.argv)
 
     if n>1:
-            test="dropout"
-            attn="soft"
-            size="small"
+            test="lr"
+            attn="hard"
+            size="large"
+            resultset="dev"
             if attn=="soft": size="small"
             rate=0.3 #dropout or learning rate
-            
-            with open(f"results/{test}_{attn}attention_{rate}.tsv", "w") as f:
-                dropout = f"transformer{rate:f}".rstrip("0")
-                print(f"soft_lr_{rate}", file=f)
-                print("Language","P","R","F1",sep="\t",file=f)
-                for i in range(1, n):
-                    lang = sys.argv[i]
-                    path = f"model/test/{test}/{attn}attention/small/test{rate}/{lang}.decode.test.tsv"
-                    pred, trg = process_results(path, lang)
-                    results = eval_morph_segments(pred, trg, lang)
-                    print(results, file=f)
+            for rate in [0.005, 0.007, 0.009]:
+                with open(f"results/{test}_{attn}attention_{size}_{rate}{resultset}.tsv", "w") as f:
+                    dropout = f"transformer{rate:f}".rstrip("0")
+                    print(f"{attn}_{test}_{rate}{resultset}", file=f)
+                    print("Language","P","R","F1",sep="\t",file=f)
+                    for i in range(1, n):
+                        lang = sys.argv[i]
+                        path = f"model/test/{test}/{attn}attention/{size}/test{rate}/{lang}.decode.{resultset}.tsv"
+                        pred, trg = process_results(path, lang)
+                        results = eval_morph_segments(pred, trg, lang)
+                        print(results, file=f)
     else:
         print(f"No files were provided for {sys.argv[0]}")
 

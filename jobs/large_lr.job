@@ -18,8 +18,9 @@ cd ${HOME}/lustre/MORPH_SEGMENT2
 arch=hard
 seed=${2:-0}
 lr=0.001
-modelpath=model/test/lr/hardattention/large/test
+modelpath=model/test/lr/large/test
 initpath=init/test/large/seed-$seed
+rm $initpath/*
 
 for data in ndebele swati xhosa zulu; do
     python src/train.py \
