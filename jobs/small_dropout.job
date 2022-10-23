@@ -17,9 +17,11 @@ cd ${HOME}/lustre/MORPH_SEGMENT2
 
 arch=hard
 seed=${2:-0}
-dropout=${2:-0.6}
+dropout=${2:-0.1}
 modelpath=model/test/dropout/small/test
 initpath=init/test/large/seed-$seed
+
+test=dropout
 
 for data in ndebele swati xhosa zulu; do
     python src/train.py \
@@ -32,3 +34,5 @@ for data in ndebele swati xhosa zulu; do
         --embed_dim 100 --src_hs 200 --trg_hs 200 --dropout $dropout \
         --arch $arch --gpuid 0 --estop 1e-8 --epochs 50 --bs 20 --cleanup_anyway
 done
+
+python3 eval_script.py $test $dropout $arch test ndebele swati xhosa zulu

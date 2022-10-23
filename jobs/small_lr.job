@@ -21,6 +21,8 @@ lr=0.001
 modelpath=model/test/lr/small/test
 initpath=init/test/small/seed-$seed
 
+test=lr
+
 for data in ndebele swati xhosa zulu; do
     python src/train.py \
         --dataset g2p \
@@ -32,3 +34,5 @@ for data in ndebele swati xhosa zulu; do
         --embed_dim 100 --src_hs 200 --trg_hs 200 --dropout 0.2 -lr $lr \
         --arch $arch --gpuid 0 --estop 1e-8 --epochs 80 --bs 20 --cleanup_anyway
 done
+
+python3 eval_script.py $test $dropout $arch test ndebele swati xhosa zulu
