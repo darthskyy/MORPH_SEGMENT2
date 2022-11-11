@@ -39,6 +39,8 @@ python pick_best.py
 ```
 
 ## Acknowledgements
-Shijie Wu for the code base for their open-source [neural transducer](https://github.com/shijie-wu/neural-transducer) used in this project
-Aaron Daniels, Tumi Moeng and Sheldon Reay for their open-source [MORPH_SEGMENT](https://github.com/DarkPr0digy/MORPH_SEGMENT) repo and evaluation scripts. Most especially for beginning the task which would have been difficult to implement without inspiration from their research
+Shijie Wu for the code base for their open-source <a href="https://github.com/shijie-wu/neural-transducer" target="_blank">neural-transducer</a> used in this project.
+
+Aaron Daniels, Tumi Moeng and Sheldon Reay for their open-source <a href="https://github.com/DarkPr0digy/MORPH_SEGMENT" target="_blank">MORPH_SEGMENT</a> repo and evaluation scripts. Most especially for beginning the task which would have been difficult to implement without inspiration from their research.
+
 Jan Buys for supervising and teaching me throughout this entire project.
