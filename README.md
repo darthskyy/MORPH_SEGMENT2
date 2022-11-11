@@ -31,9 +31,11 @@ bash example/small_HNT.sh
 bash example/ST.sh
 
 # after the training is done, you can run eval_script.py and follow the prompts
+# this evaluation only works with all the tests conducted exactly as in the project with the job scripts in ./jobs
 python eval_script.py
 
-# if all the parameters are trained for as in the final report you can run the pick_best.py file to select the best model based on development set performance
+# if all the parameters are trained for as in the final report you can run the
+#pick_best.py file to select the best model based on development set performance
 python pick_best.py
 
 ```
