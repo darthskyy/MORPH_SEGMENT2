@@ -31,14 +31,18 @@ bash example/small_HNT.sh
 bash example/ST.sh
 
 # after the training is done, you can run eval_script.py and follow the prompts
+# this evaluation only works with all the tests conducted exactly as in the project with the job scripts in ./jobs
 python eval_script.py
 
-# if all the parameters are trained for as in the final report you can run the pick_best.py file to select the best model based on development set performance
+# if all the parameters are trained for as in the final report you can run the
+#pick_best.py file to select the best model based on development set performance
 python pick_best.py
 
 ```
 
 ## Acknowledgements
-Shijie Wu for the code base for their open-source [neural transducer](https://github.com/shijie-wu/neural-transducer) used in this project
-Aaron Daniels, Tumi Moeng and Sheldon Reay for their open-source [MORPH_SEGMENT](https://github.com/DarkPr0digy/MORPH_SEGMENT) repo and evaluation scripts. Most especially for beginning the task which would have been difficult to implement without inspiration from their research
+Shijie Wu for the code base for their open-source [neural transducer](https://github.com/shijie-wu/neural-transducer) used in this project.
+
+Aaron Daniels, Tumi Moeng and Sheldon Reay for their open-source [MORPH_SEGMENT](https://github.com/DarkPr0digy/MORPH_SEGMENT) repo and evaluation scripts. Most especially for beginning the task which would have been difficult to implement without inspiration from their research.
+
 Jan Buys for supervising and teaching me throughout this entire project.
