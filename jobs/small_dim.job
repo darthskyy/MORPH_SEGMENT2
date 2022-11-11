@@ -1,11 +1,10 @@
 #!/bin/bash
 
-#PBS -N trans_drop_0.1
+#PBS -N small_dim_100
 #PBS -l select=1:ncpus=10:ngpus=1
 #PBS -l walltime=8:00:00
 #PBS -P CSCI1335
 #PBS -m abe
-#PBS -M mwrsim003@myuct.ac.za
 #PBS -q gpu_1
 ulimit -s unlimited
 
@@ -17,10 +16,14 @@ cd ${HOME}/lustre/MORPH_SEGMENT2
 
 arch=hard
 seed=${2:-0}
-dropout=${2:-0.1}
+lr=0.001
+dim=
 
-test=dropout
+test=dim
 modelpath=model/test/$test/small/test
+initpath=init/test/small/seed-$seed
+
+
 
 for data in ndebele swati xhosa zulu; do
     python src/train.py \
@@ -28,10 +31,10 @@ for data in ndebele swati xhosa zulu; do
         --train data/$data/$data.train \
         --dev data/$data/$data.dev \
         --test data/$data/$data.test \
-        --model $modelpath$dropout/$data \
+        --model $modelpath$dim/$data \
         --init $initpath/$data --seed $seed \
-        --embed_dim 100 --src_hs 200 --trg_hs 200 --dropout $dropout \
-        --arch $arch --gpuid 0 --estop 1e-8 --epochs 50 --bs 20 --cleanup_anyway
+        --embed_dim 100 --src_hs 200 --trg_hs 200 --dropout 0.2 -lr $lr \
+        --arch $arch --gpuid 0 --estop 1e-8 --epochs 80 --bs 20 --cleanup_anyway
 done
 
 python3 eval_script.py $test $dropout $arch test ndebele swati xhosa zulu

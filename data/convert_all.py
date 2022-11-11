@@ -1,7 +1,7 @@
 import os
 from process_data import process_file
 
-directory = "C:\\Users\\simba\\OneDrive\\Documents\\Neural-Transducer\\neural-transducer\\data\\"
+directory = "data\\"
 languages = ["ndebele", "swati", "xhosa", "zulu"]
 
 for language in languages:

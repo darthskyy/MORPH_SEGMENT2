@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N test_lr_5e-3
+#PBS -N test_drop_0.1
 #PBS -l select=1:ncpus=10:ngpus=1
 #PBS -l walltime=8:00:00
 #PBS -P CSCI1335
@@ -35,5 +35,3 @@ for data in ndebele swati xhosa zulu; do
         --src_layer 2 --trg_layer 1 --max_norm 5 --nb_sample 4 \
         --arch $arch --gpuid 0 --estop 1e-8 --epochs 50 --bs 20 --cleanup_anyway
 done
-
-python3 eval_script.py $test $dropout $arch test ndebele swati xhosa zulu

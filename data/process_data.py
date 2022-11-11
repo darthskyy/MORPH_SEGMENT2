@@ -1,4 +1,7 @@
 def remove_anno(segment: str) -> str:
+    """
+    This method removes the unnecessary annotations from a line of data
+    """
     out_string = ""
     out_length=0
     in_bracket = False
@@ -22,7 +25,10 @@ def remove_anno(segment: str) -> str:
             
 
 def process_file(filename: str) -> None:
-    out_filename = filename[:filename.rfind(".")] + "_proc" + filename[filename.rfind("."):]
+    """
+    Takes one of the .conll files and processes into suitable input files for the neural-transducer g2p dataloader
+    """
+    # out_filename = filename[:filename.rfind(".")] + "_proc" + filename[filename.rfind("."):]
     out_filename = filename[:filename.find(".")] + filename[filename.find("clean")+5:filename.rfind(".")]
     with open(filename, "r") as f:
         data = f.readlines()[:-1]
@@ -40,7 +46,7 @@ def process_file(filename: str) -> None:
 
 
 def main():
-    process_file("C:\\Users\\simba\\OneDrive\\Documents\\Neural-Transducer\\neural-transducer\\data\\ndebele\\ndebele.clean.train.conll")
+    process_file("data\\ndebele\\ndebele.clean.train.conll")
 
 
 if __name__=="__main__":
