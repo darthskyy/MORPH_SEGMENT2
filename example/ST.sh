@@ -1,5 +1,4 @@
 #!/bin/bash
-dataset=$1
 arch=transformer
 
 lr=0.001
@@ -17,16 +16,14 @@ hs=1024
 embed_dim=300
 nb_heads=4
 dropout=${2:-0.3}
-
 data=ndebele
-ckpt_dir=checkpoints/transformer
 
 python3 src/train.py \
     --dataset g2p \
     --train data/$data/$data.train \
     --dev data/$data/$data.dev \
     --test data/$data/$data.test \
-    --model $ckpt_dir/$arch/g2p-dropout$dropout/$data \
+    --model model/example/ST/$data \
     --embed_dim $embed_dim --src_hs $hs --trg_hs $hs --dropout $dropout --nb_heads $nb_heads \
     --label_smooth $label_smooth --total_eval $total_eval \
     --src_layer $layers --trg_layer $layers --max_norm 1 --lr $lr --shuffle \
